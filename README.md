@@ -9,7 +9,7 @@ Installation
 Add spree_payment_type_promotion to your Gemfile:
 
 ```ruby
-gem 'spree_payment_type_promotion'
+gem 'spree_payment_type_promotion', github: 'QuintinAdam/spree_payment_type_promotion', branch: '3-0-stable'
 ```
 
 Bundle your dependencies and run the installation generator:
