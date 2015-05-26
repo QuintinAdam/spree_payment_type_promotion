@@ -1,5 +1,7 @@
 en:
   spree:
     promotion_rule_types:
-      payment_types:
-        hello: "Hello world"
+      payment_type:
+        name: "Payment Type"
+        description: "Promotion based on payment type"
+

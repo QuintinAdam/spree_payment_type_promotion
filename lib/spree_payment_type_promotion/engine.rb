@@ -22,5 +22,6 @@ module SpreePaymentTypePromotion
     initializer "spree.promotions.rules.payment_types", after: "spree.promo.environment" do |app|
       app.config.spree.promotions.rules << Spree::Promotion::Rules::PaymentType
     end
+
   end
 end
