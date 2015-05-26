@@ -4,6 +4,8 @@ module SpreePaymentTypePromotion
     isolate_namespace Spree
     engine_name 'spree_payment_type_promotion'
 
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # use rspec for tests
     config.generators do |g|
       g.test_framework :rspec
@@ -16,5 +18,10 @@ module SpreePaymentTypePromotion
     end
 
     config.to_prepare &method(:activate).to_proc
+
+    initializer "spree.promotions.rules.payment_types", after: "spree.promotions.rules" do |app|
+      Rails.application.config.spree.promotions.rules << Spree::Promotion::Rules::PaymentType
+
+    end
   end
 end
