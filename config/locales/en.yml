@@ -1,6 +1,5 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
   spree:
-    hello: "Hello world"
+    promotion_rule_types:
+      payment_types:
+        hello: "Hello world"

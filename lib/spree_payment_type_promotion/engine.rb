@@ -19,9 +19,8 @@ module SpreePaymentTypePromotion
 
     config.to_prepare &method(:activate).to_proc
 
-    initializer "spree.promotions.rules.payment_types", after: "spree.promotions.rules" do |app|
-      Rails.application.config.spree.promotions.rules << Spree::Promotion::Rules::PaymentType
-
+    initializer "spree.promotions.rules.payment_types", after: "spree.promo.environment" do |app|
+      app.config.spree.promotions.rules << Spree::Promotion::Rules::PaymentType
     end
   end
 end
