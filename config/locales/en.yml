@@ -4,4 +4,5 @@ en:
       payment_type:
         name: "Payment Type"
         description: "Promotion based on payment type"
+        choose_payment_method: "Choose payment method"
 
