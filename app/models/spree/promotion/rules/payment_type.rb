@@ -9,8 +9,9 @@ module Spree
         end
 
         def eligible?(order, options = {})
-          raise 'the roof'
-
+          if order.payments.any?
+            raise 'the roof'
+          end
         end
 
         def actionable?(line_item)
