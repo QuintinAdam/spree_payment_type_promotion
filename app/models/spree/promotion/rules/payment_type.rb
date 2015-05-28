@@ -11,7 +11,7 @@ module Spree
         def eligible?(order, options = {})
           order.payments.any? do |order_payment|
             unless ['failed', 'void', 'completed'].include?(order_payment.state)
-              promotion.promotion_rules.where(type: "Spree::Promotion::Rules::PaymentType").first.payment_methods.any?{|pay_type| order_payment.payment_method.class.to_s == pay_type.type }
+              promotion.promotion_rules.where(type: "Spree::Promotion::Rules::PaymentType").first.payment_methods.any?{|pay_type| order_payment.payment_method == pay_type }
             end
           end
         end
